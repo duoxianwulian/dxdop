@@ -2,7 +2,7 @@
     <b>English</b>| <a href="./README_CN.md">中文</a>
 </p>
 
-<h1 align="center">DUOXIAN Device Open Platform</h1>
+<h1 align="center">duoxian Device Open Platform</h1>
 
 📒 Overview and Summary
 -------------
