@@ -1,5 +1,5 @@
 <p align="right">
-    <a href="../README.md">English</a>| <b>中文</b>
+    <a href="./README.md">English</a>| <b>中文</b>
 </p>
 
  <h1 align="center">多弦设备开放平台</h1>
