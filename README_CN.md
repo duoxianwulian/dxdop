@@ -58,7 +58,7 @@ dxdop是一个嵌入式二次开发软件平台，它使用JS语言作为主开�
 
 **熟悉 dxdop** 
 
-1. 查看 <a href="" target="_blank">演示</a> ，了解 dxdop 产出效果
+1. 查看 <a href="./docs/image/README.md" target="_blank">演示</a> ，了解 dxdop 产出效果
 2. 阅读 <a href="./src/README_CN.md" target="_blank">文档</a> 熟悉组件能力使用
 3. 熟悉 <a href="" target="_blank">脚手架 </a> 项目构建及代码框架
 

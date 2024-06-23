@@ -50,7 +50,7 @@ This list will guide you step by step to start using dxdop.
 
 **Get Familiar with dxdop**
 
-1. View <a href="" target="_blank">demo</a> to understand the output of dxdop
+1. View <a href="./docs/image/README.md" target="_blank">demo</a> to understand the output of dxdop
 2. Read <a href="./src/README.md" target="_blank">documentation</a> to get familiar with component capabilities
 3. Get familiar with <a href="" target="_blank">scaffolding</a> project construction and code framework
 
