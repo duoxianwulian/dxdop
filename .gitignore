@@ -1,0 +1,4 @@
+/.vscode
+**/dxmodules/
+**/node_modules/
+**/.temp/
