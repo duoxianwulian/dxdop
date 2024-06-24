@@ -4,6 +4,9 @@
 
  <h1 align="center">dxdop_demos</h1>
 
+## dw200_mqtt_access
+
+<a href="./dw200_mqtt_access/README_CN.md" target="_blank">dw200_mqtt_access</a> 服务于酷豆dw200设备在线验证门禁应用项目，具备mqtt门禁管理协议，扫码、密码、按键开门等通行能力
 
 ## dw200_access
 
