@@ -1,6 +1,6 @@
 
 <p align="right">
-    <a href="./README.md">English</a>| <b>Chinese</b>
+    <a href="./README_CN.md">Chinese</a>| <b>English</b>
 </p>
 
 <h1 align="center">MQTT-based Online Access Control Example</h1>
