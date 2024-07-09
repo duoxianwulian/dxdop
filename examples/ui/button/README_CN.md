@@ -27,7 +27,7 @@ button.setSize(50, 130)
 按钮样式适用于框架内提供的样式集，具体查看 style
 
 ## 事件
-目前按钮支持三种点击方式
+目前按钮支持多数事件绑定
 - 点击，点击按钮抬起时候执行方法，不会判读接触屏幕时间长短
 ```js
 button.on(ui.Utils.EVENT.CLICK, () => {})
@@ -40,7 +40,7 @@ button.on(ui.Utils.EVENT.LONG_PRESSED, () => {})
 ```js
 button.on(ui.Utils.EVENT.SHORT_PRESSED, () => {})
 ```
-
+了解更多事件详情，请转到 Events（事件）。
 
 ## 代码示例
 ![alt text](btn.png)
