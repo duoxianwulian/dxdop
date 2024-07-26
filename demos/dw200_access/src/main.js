@@ -4,10 +4,7 @@ import center from '../dxmodules/dxEventCenter.js'
 import config from '../dxmodules/dxConfig.js'
 import screen from './screen.js'
 import driver from './driver.js'
-import utils from './common/utils/utils.js'
 import common from '../dxmodules/dxCommon.js'
-import map from '../dxmodules/dxMap.js'
-import queue from '../dxmodules/dxQueue.js'
 
 
 (function () {
@@ -27,7 +24,7 @@ import queue from '../dxmodules/dxQueue.js'
         worker.postMessage(1);
     }
 
-    const appVersion = 'dw200_access_v1.3.1'
+    const appVersion = 'dw200_access_v1.3.3'
     config.set('sysInfo.appVersion', appVersion)
     // 屏幕显示版本号
     screen.showVersion(appVersion)

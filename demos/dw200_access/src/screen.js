@@ -12,7 +12,7 @@ import queueCenter from './queueCenter.js'
 import utils from './common/utils/utils.js'
 import driver from './driver.js'
 import center from '../dxmodules/dxEventCenter.js'
-
+let startTime = new Date().getTime()
 const screen = {}
 
 // 系统当前时间戳
@@ -157,14 +157,12 @@ screen.onEvent = function () {
     // 注册密码键盘事件
     passwordView.password_btnm.on(dxui.Utils.EVENT.CLICK, () => {
         let txt = passwordView.password_btnm.clickedButton().text;
-        log.info("点击的按键：" + txt);
         // 最多输入14位
         if (password.length >= 14) {
             password = ""
         }
         if (passwordArray.includes(txt)) {
             password += txt
-            log.info("输入的密码: " + password);
         } else if (txt == "确认" || txt == "CFM") {
             if (!password) {
                 password = "-1"
@@ -390,6 +388,11 @@ function rotate(dir) {
     popWin.center_label.width(popWin.center_cont.width())
     popWin.center_img.alignTo(popWin.center_cont, dxui.Utils.ALIGN.OUT_TOP_MID, 0, 60);
     timeAlign()
+    if (new Date().getTime() - startTime > 600000) {
+        mainView.screen_label_company.longMode(dxui.Utils.LABEL_LONG_MODE.SCROLL_CIRCULAR)
+        mainView.bottom_ip.longMode(dxui.Utils.LABEL_LONG_MODE.SCROLL_CIRCULAR)
+        mainView.bottom_sn.longMode(dxui.Utils.LABEL_LONG_MODE.SCROLL_CIRCULAR)
+    }
 }
 
 function setFont(param) {

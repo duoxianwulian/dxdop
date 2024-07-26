@@ -13,7 +13,7 @@ sqliteService.init = function (path) {
     }
     let newPath=getLastSegment(path)
     if(newPath){
-        std.ensurePathExists(newPath)
+        std.mkdir(newPath)
     }
     
     sqliteObj.init(path)

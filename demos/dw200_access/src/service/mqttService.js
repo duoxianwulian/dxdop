@@ -14,7 +14,7 @@ const mqttService = {}
 
 // 配置查询
 mqttService.getConfig = function (raw) {
-    log.info("{mqttService} [getConfig] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [getConfig] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     let configAll = config.getAll()
     let res = {}
@@ -55,7 +55,7 @@ mqttService.getConfig = function (raw) {
 
 // 配置修改
 mqttService.setConfig = function (raw) {
-    log.info("{mqttService} [setConfig] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [setConfig] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!data || typeof data != 'object') {
         reply(raw, "data should not be empty", CODE.E_100)
@@ -76,7 +76,7 @@ mqttService.setConfig = function (raw) {
 
 // 查询权限
 mqttService.getPermission = function (raw) {
-    log.info("{mqttService} [getPermission] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [getPermission] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!data || typeof data != 'object') {
         reply(raw, "data should not be empty", CODE.E_100)
@@ -100,7 +100,7 @@ mqttService.getPermission = function (raw) {
 
 // 添加权限
 mqttService.insertPermission = function (raw) {
-    log.info("{mqttService} [insertPermission] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [insertPermission] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!Array.isArray(data)) {
         reply(raw, "data shoulde be an array", CODE.E_100)
@@ -169,7 +169,7 @@ mqttService.insertPermission = function (raw) {
 
 // 删除权限
 mqttService.delPermission = function (raw) {
-    log.info("{mqttService} [delPermission] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [delPermission] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!Array.isArray(data)) {
         reply(raw, "data shoulde be an array", CODE.E_100)
@@ -192,7 +192,7 @@ mqttService.delPermission = function (raw) {
 
 // 清空权限
 mqttService.clearPermission = function (raw) {
-    log.info("{mqttService} [clearPermission] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [clearPermission] req:" + JSON.stringify(raw))
     try {
         let res = sqliteFuncs.permissionClear()
         if (res == 0) {
@@ -210,7 +210,7 @@ mqttService.clearPermission = function (raw) {
 
 // 查询密钥
 mqttService.getSecurity = function (raw) {
-    log.info("{mqttService} [getSecurity] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [getSecurity] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!data || typeof data != 'object') {
         reply(raw, "data should not be empty", CODE.E_100)
@@ -234,7 +234,7 @@ mqttService.getSecurity = function (raw) {
 
 // 添加密钥
 mqttService.insertSecurity = function (raw) {
-    log.info("{mqttService} [insertSecurity] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [insertSecurity] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!Array.isArray(data)) {
         reply(raw, "data shoulde be an array", CODE.E_100)
@@ -265,7 +265,7 @@ mqttService.insertSecurity = function (raw) {
 
 // 删除密钥
 mqttService.delSecurity = function (raw) {
-    log.info("{mqttService} [delSecurity] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [delSecurity] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!Array.isArray(data)) {
         reply(raw, "data shoulde be an array", CODE.E_100)
@@ -288,7 +288,7 @@ mqttService.delSecurity = function (raw) {
 
 // 清空密钥
 mqttService.clearSecurity = function (raw) {
-    log.info("{mqttService} [clearSecurity] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [clearSecurity] req:" + JSON.stringify(raw))
     try {
         let res = sqliteFuncs.securityClear()
         if (res == 0) {
@@ -306,7 +306,7 @@ mqttService.clearSecurity = function (raw) {
 
 // 远程控制
 mqttService.control = function (raw) {
-    log.info("{mqttService} [control] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [control] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!data || typeof data != 'object' || typeof data.command != 'number') {
         reply(raw, "data.command should not be empty", CODE.E_100)
@@ -344,7 +344,7 @@ mqttService.control = function (raw) {
 
 // 升级固件
 mqttService.upgradeFirmware = function (raw) {
-    log.info("{mqttService} [upgradeFirmware] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [upgradeFirmware] req:" + JSON.stringify(raw))
     let data = JSON.parse(raw.payload).data
     if (!data || typeof data != 'object' || typeof data.type != 'number' || typeof data.url != 'string' || typeof data.md5 != 'string') {
         reply(raw, "data's params error", CODE.E_100)
@@ -395,7 +395,7 @@ mqttService.upgradeFirmware = function (raw) {
 
 // 通行记录回复
 mqttService.access_reply = function (raw) {
-    log.info("{mqttService} [access_reply] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [access_reply] req:" + JSON.stringify(raw))
     let payload = JSON.parse(raw.payload)
     let map = dxMap.get("REPORT")
     let data = map.get(payload.serialNo).list
@@ -409,7 +409,7 @@ mqttService.access_reply = function (raw) {
  * 在线验证结果
  */
 mqttService.access_online_reply = function (raw) {
-    log.info("{mqttService} [access_online_reply] req:" + JSON.stringify(raw))
+   //  log.info("{mqttService} [access_online_reply] req:" + JSON.stringify(raw))
     driver.mqtt.getOnlinecheckReply(JSON.parse(raw.payload))
 }
 
