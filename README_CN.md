@@ -32,7 +32,7 @@ dxdop是一个嵌入式二次开发软件平台，它使用JS语言作为主开�
 
 - 使用VScode && <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">DXIDE</a> 插件 开发调试
 
-- 包含 <a href="./examples/ui/README_CN.md" target="_blank">UI组件示例</a> 、 <a href="./examples/dw200/" target="_blank">驱动组件示例</a> 以及 <a href="./src/README_CN.md" target="_blank">组件源码</a>，<a href="./demos/README_CN.md" target="_blank">开源项目demo</a>
+- 包含 <a href="./docs/ui/README_CN.md" target="_blank">UI组件示例</a> 、 <a href="./examples/dw200/" target="_blank">驱动组件示例</a> 以及 <a href="./src/README_CN.md" target="_blank">组件源码</a>，<a href="./demos/README_CN.md" target="_blank">开源项目demo</a>
 
 <br>
 

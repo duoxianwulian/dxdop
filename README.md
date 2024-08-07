@@ -26,7 +26,7 @@ dxdop is an embedded secondary development software platform that uses JavaScrip
 **Tools and Services**
 
 - Development and debugging using VScode and the <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">DXIDE</a> plugin
-- Includes <a href="./examples/ui/README.md" target="_blank">UI component examples</a> 、 <a href="./examples/dw200/" target="_blank">driver component examples</a> and <a href="./src/README.md" target="_blank">component source code</a>, as well as <a href="./demos/README.md" target="_blank">open source project demos</a>
+- Includes <a href="./docs/ui/README.md" target="_blank">UI component examples</a> 、 <a href="./examples/dw200/" target="_blank">driver component examples</a> and <a href="./src/README.md" target="_blank">component source code</a>, as well as <a href="./demos/README.md" target="_blank">open source project demos</a>
 
 <br>
 
