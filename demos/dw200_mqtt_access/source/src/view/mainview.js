@@ -1,13 +1,13 @@
 import logger from '../../dxmodules/dxLogger.js'
 import dxui from '../../dxmodules/dxUi.js'
 import common from '../../dxmodules/dxCommon.js'
-import center from '../../dxmodules/dxEventCenter.js'
 import dxNet from '../../dxmodules/dxNet.js'
 import dxMqtt from '../../dxmodules/dxMqtt.js'
 import config from '../../dxmodules/dxConfig.js'
 import helper from './viewhelper.js'
 import entryview from './entryview.js'
 import driver from '../driver.js'
+import bus from '../../dxmodules/dxEventBus.js'
 const VERSION = '1.1.0'
 const ui = {}
 ui.popTime = 0
@@ -120,7 +120,8 @@ function setConfig(param) {
     config.setAndSave('net.mask', param.netmask)
 }
 function initOn() {
-    center.on(dxNet.STATUS_CHANGE, function (data) {
+    bus.on(dxNet.STATUS_CHANGE, function (data) {
+        logger.info('..........................',data.connected)
         if (ui.showNetMqtt) { ui.netImage.source(helper.ROOT + 'image/eth' + (data.connected ? 'on' : 'off') + '.png') }
         if (data.connected) {
             let param = dxNet.getModeByCard(data.type).param
@@ -129,20 +130,20 @@ function initOn() {
         } else {
             if (ui.showSnIp) { ui.ipLabel.text('  ') }
         }
-    }, 'mainview')
+    })
     if (ui.showNetMqtt) {
-        center.on(dxMqtt.CONNECTED_CHANGED, function (data) {
+        bus.on(dxMqtt.CONNECTED_CHANGED, function (data) {
             ui.mqttImage.source(helper.ROOT + 'image/mqtt' + ((data === 'connected') ? 'on' : 'off') + '.png')
-        }, 'mainview')
+        })
     }
     ui.popImageview = helper.buildView('popImageview', dxui.Utils.LAYER.TOP, 0, 0, 480, 320)
     const popImage = helper.buildImage("popimage", ui.popImageview, 0, 0, 480, 320)
     ui.popImageview.hide()
-    center.on('ui', function (data) {
+    bus.on('ui', function (data) {
         // logger.info(data)
         ui.popTime = Date.now() + (data.extra.timeout || 2000)
         popImage.source(helper.ROOT + 'image/' + data.extra.image)
-    }, 'mainview')
+    })
 }
 function showPopImage() {
     if (!ui.popImageview) {

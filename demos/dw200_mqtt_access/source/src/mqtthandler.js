@@ -4,8 +4,8 @@ import driver from './driver.js'
 import config from '../dxmodules/dxConfig.js'
 import common from '../dxmodules/dxCommon.js'
 import std from '../dxmodules/dxStd.js'
-import center from '../dxmodules/dxEventCenter.js'
 import ntp from '../dxmodules/dxNtp.js'
+import dxNet from '../dxmodules/dxNet.js'
 const vg = {}
 vg.invoke = function (pack) {
     if (!pack) {
@@ -25,6 +25,47 @@ vg.invoke = function (pack) {
     } else if (topic.endsWith('/upgradeFirmware')) {
         upgrade(pack)
     }
+}
+vg.netInvoke = function (pack) {
+    let param = dxNet.getModeByCard(dxNet.TYPE.ETHERNET).param
+    if (param.ip) {
+        config.set('netInfo.ip', param.ip)
+    }
+    if (param.gateway) {
+        config.set('netInfo.gateway', param.gateway)
+    }
+    if (param.netmask) {
+        config.set('netInfo.subnetMask', param.netmask)
+    }
+    if (param.dns0) {
+        config.set('netInfo.dns', param.dns0)
+    }
+    config.save()   
+}
+/**
+ * 连接上报
+ */
+vg.connectChanged = function (pack) {
+    if (pack !=='connected') {
+        return
+    }
+
+    let data = {}
+    data.sysVersion = config.get("sysInfo.sysVersion")
+    data.appVersion = config.get("sysInfo.appVersion")
+    data.createTime = config.get("sysInfo.createTime")
+    data.mac = common.getUuid2mac()
+    data.clientId = common.getSn()
+    data.name = config.get("sysInfo.deviceName") 
+    data.type = config.get("netInfo.type") || 1
+    data.dhcp = config.get("netInfo.dhcp") || 1
+    data.ip = config.get("netInfo.ip")
+    data.gateway = config.get("netInfo.gateway")
+    data.dns = config.get("netInfo.dns")
+    data.subnetMask = config.get("netInfo.subnetMask")
+    data.netMac = config.get("netInfo.netMac")
+
+    send("access_device/v1/event/connect", data)
 }
 function upgrade(pack) {
     let topic = 'access_device/v1/cmd/upgradeFirmware_reply'

@@ -7,14 +7,17 @@ import std from '../dxmodules/dxStd.js'
 import mqtt from './mqtthandler.js'
 const vg = {}
 vg.invoke = function (pack) {
-    if (!pack || pack.length < 0) {
+    let data = Array.from(new Uint8Array(pack))
+    if (!data || data.length < 0) {
         return
     }
+    data = common.arrToHex(data)
     driver.pwm.press()
-    logger.info('code: ', pack)
-    if (pack.startsWith('___VBAR_CONFIG_V1.1.0___')) {
+    logger.info('code: ', data)
+    // 配置码前缀：5f5f5f564241525f434f4e4649475f56312e312e305f5f5f
+    if (data.startsWith('5f5f5f564241525f434f4e4649475f56312e312e305f5f5f')) {
         try {
-            setConfig(pack)
+            setConfig(common.utf8HexToStr(data))
         } catch (error) {
             logger.error(error)
             driver.pwm.fail()
@@ -22,7 +25,7 @@ vg.invoke = function (pack) {
         return
     }
     driver.pwm.success()
-    mqtt.accessOnline('code', pack)// 透传
+    mqtt.accessOnline('code', data)// 透传
 }
 function setConfig(pack) {//扫描配置
     const start = '___VBAR_CONFIG_V1.1.0___'.length

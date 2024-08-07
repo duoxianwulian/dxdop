@@ -10,6 +10,7 @@ import constants from './constants.js'
 import logger from '../dxmodules/dxLogger.js'
 import ntp from '../dxmodules/dxNtp.js'
 import dxWatchdog from '../dxmodules/dxWatchdog.js'
+import bus from '../dxmodules/dxEventBus.js'
 const driver = {}
 
 driver.watchdog = {
@@ -49,16 +50,22 @@ driver.net = {
     init: function () {
         dxNet.worker.beforeLoop(constants.netoption())
     },
-    loop: function (center) {
-        dxNet.worker.loop(center)
+    on: function (fun) {
+        bus.on(dxNet.STATUS_CHANGE, fun)
+    },
+    loop: function () {
+        dxNet.worker.loop()
     }
 }
 driver.mqtt = {
     init: function () {
         dxMqtt.run(constants.mqttoption())
     },
-    on: function (center, name, fun) {
-        center.on(dxMqtt.RECEIVE_MSG, fun, name)
+    on: function (fun) {
+        bus.on(dxMqtt.RECEIVE_MSG, fun)
+    },
+    onConnectChanged: function (fun) {
+        bus.on("__mqtt__Connect_changed", fun)
     },
     send: function (data) {
         dxMqtt.send(data.topic, data.payload)
@@ -79,10 +86,8 @@ driver.gpio = {
         if (!delay || typeof delay !== 'number' || isNaN(delay)) {
             delay = 2000; // 默认 2000
         }
-        logger.info("toggle start")
         dxGpio.setValue(105, 1)
         std.sleep(Math.max(delay, 50))//最少也要sleep 50毫秒
-        logger.info("toggle end")
         dxGpio.setValue(105, 0)
     }
 }
@@ -90,10 +95,14 @@ driver.code = {
     capturerOptions: { id: 'caputurer', path: '/dev/video11' },
     decoderOptions: { id: 'decoder', name: 'dxcode', width: 800, height: 600 },
     init: function () {
-        dxCode.run(this.capturerOptions, this.decoderOptions)
+        driver.code.option = constants.codeoption()
+        dxCode.worker.beforeLoop(this.capturerOptions, this.decoderOptions)
     },
-    on: function (center, name, fun) {
-        center.on(dxCode.CODE_CONTENT, fun, name)
+    loop: function () {
+        dxCode.worker.loop(driver.code.option.mode, driver.code.option.interval)
+    },
+    on: function (fun) {
+        bus.on(dxCode.RECEIVE_MSG, fun)
     }
 }
 driver.audio = {
@@ -107,7 +116,7 @@ driver.audio = {
             dxAlsaplay.setVolume(Math.ceil(Math.min(option.volumn || 30, 60) / 10))
         }
         if (option.boot) {//缺省不播放
-            this.play('0.wav')
+            this.play('boot_music.wav')
         }
     },
     play: function (wav) {
@@ -146,8 +155,6 @@ driver.initMain = function () {
     std.sleep(100)
     this.mqtt.init()
     std.sleep(100)
-    this.code.init()
-    std.sleep(100)
 }
 driver.initService = function () {
     ntp.beforeLoop()
@@ -155,6 +162,8 @@ driver.initService = function () {
     this.net.init()
     std.sleep(100)
     this.audio.init()
+    std.sleep(100)
+    this.code.init()
     std.sleep(100)
 }
 driver.loop = function (center) {
