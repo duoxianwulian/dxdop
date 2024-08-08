@@ -1,3 +1,8 @@
+<p align="right">
+    <a href="./README.md">English</a>| <b>中文</b>
+</p>
+
+
 # Line （线条）
 
 ## 概述

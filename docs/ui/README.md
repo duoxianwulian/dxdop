@@ -8,15 +8,11 @@
 ## UI 组件
 
 
-- <a href="./base/README.md">base</a>
-- <a href="./util/README.md">util</a>
-- <a href="./view/README.md">view</a>
 - <a href="./button/README.md">button</a>
 - <a href="./buttons/README.md">buttons</a>
 - <a href="./checkbox/README.md">checkbox</a>
 - <a href="./dropdown/README.md">dropdown</a>
 - <a href="./font/README.md">font</a>
-- <a href="./image/README.md">image</a>
 - <a href="./keyboard/README.md">keyboard</a>
 - <a href="./label/README.md">label</a>
 - <a href="./line/README.md">line</a>
