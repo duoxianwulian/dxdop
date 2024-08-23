@@ -9,8 +9,9 @@ The application examples include a variety of open-source code libraries for dif
 
 ## Application List
 
-| --- | --- | --- | --- |
+
 | Project | Model | Description | Action |
+| --- | --- | --- | --- |
 | dw200_project_template | DW200 | Blank project template | <a href="./dw200/dw200_project_template/" target="_blank">View</a> |
 | cc104_project_template | CC104 | Blank project template | <a href="./cc104/cc104_project_template/" target="_blank">View</a> |
 | vf105_project_template | VF105 | Blank project template | <a href="./vf105/vf105_project_template/" target="_blank">View</a> |
