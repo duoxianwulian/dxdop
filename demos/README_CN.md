@@ -4,14 +4,21 @@
 
  <h1 align="center">dxdop_demos</h1>
 
-## dw200_mqtt_access
+## 设备应用示例
+应用示例包含多种场景开源代码库，避免重复造轮子，同时包含空白项目模板 `xxx_project_template` 分布在各型号目录下。
 
-<a href="./dw200_mqtt_access/README_CN.md" target="_blank">dw200_mqtt_access</a> 服务于酷豆dw200设备在线验证门禁应用项目，具备mqtt门禁管理协议，扫码、密码、按键开门等通行能力
 
-## dw200_access
+## 应用列表
 
-dw200_access服务于酷豆dw200设备的门禁应用项目，具备mqtt门禁管理协议，以及扫码、刷卡、密码、按键开门等通行能力
+| --- | --- | --- | --- |
+| 项目 | 型号 | 描述 | 操作 |
+| dw200_project_template | DW200 | 空白项目模板 | <a href="./dw200/dw200_project_template/" target="_blank">查看</a> |
+| cc104_project_template | CC104 | 空白项目模板 | <a href="./cc104/cc104_project_template/" target="_blank">查看</a> |
+| vf105_project_template | VF105 | 空白项目模板 | <a href="./vf105/vf105_project_template/" target="_blank">查看</a> |
+| vf205_project_template | VF205 | 空白项目模板 | <a href="./vf205/vf205_project_template/" target="_blank">查看</a> |
+| dw200_mqtt_access | DW200 | 门禁控制 | <a href="./dw200/dw200_mqtt_access/" target="_blank">查看</a> |
+| dw200_home_control | DW200 | 家控面板 | <a href="./dw200/dw200_home_control/" target="_blank">查看</a> |
+| dw200_industrial_control | DW200 | 工控面板 | <a href="./dw200/dw200_industrial_control/" target="_blank">查看</a> |
+| dw200_medical | DW200 | 医用设备 | <a href="./dw200/dw200_medical/" target="_blank">查看</a> |
+| vf203_face | VF203 | 人脸识别 | <a href="./vf203/vf203_face/" target="_blank">查看</a> |
 
-## vf203_face
-
-vf203_face服务于酷豆vf203设别人脸识别应用项目，具备mqtt门禁管理协议，webserver + http设备管理协议，人脸识别、刷卡、密码、按键等通行能力

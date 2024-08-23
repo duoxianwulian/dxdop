@@ -4,14 +4,19 @@
 
 <h1 align="center">dxdop_demos</h1>
 
-## dw200_mqtt_access
+## Device Application Examples
+The application examples include a variety of open-source code libraries for different scenarios to avoid reinventing the wheel. They also contain blank project templates `xxx_project_template` distributed in the directories of each model.
 
-<a href="./dw200_mqtt_access/README.md" target="_blank">dw200_mqtt_access</a> Serving the Koodle DW200 device for the online verification access control application project, it has an MQTT access control management protocol and supports various access methods such as QR code scanning, password entry, and button opening.
+## Application List
 
-## dw200_access
-
-The dw200_access serves the access control application project for the Koodle dw200 device. It features an MQTT access control management protocol, and supports access via QR code, card swipe, password, and button.
-
-## vf203_face
-
-The vf203_face serves the face recognition application project for the Koodle vf203 device. It features an MQTT access control management protocol, a webserver + HTTP device management protocol, and supports access via face recognition, card swipe, password, and button.
+| --- | --- | --- | --- |
+| Project | Model | Description | Action |
+| dw200_project_template | DW200 | Blank project template | <a href="./dw200/dw200_project_template/" target="_blank">View</a> |
+| cc104_project_template | CC104 | Blank project template | <a href="./cc104/cc104_project_template/" target="_blank">View</a> |
+| vf105_project_template | VF105 | Blank project template | <a href="./vf105/vf105_project_template/" target="_blank">View</a> |
+| vf205_project_template | VF205 | Blank project template | <a href="./vf205/vf205_project_template/" target="_blank">View</a> |
+| dw200_mqtt_access | DW200 | Access control | <a href="./dw200/dw200_mqtt_access/" target="_blank">View</a> |
+| dw200_home_control | DW200 | Home control panel | <a href="./dw200/dw200_home_control/" target="_blank">View</a> |
+| dw200_industrial_control | DW200 | Industrial control panel | <a href="./dw200/dw200_industrial_control/" target="_blank">View</a> |
+| dw200_medical | DW200 | Medical equipment | <a href="./dw200/dw200_medical/" target="_blank">View</a> |
+| vf203_face | VF203 | Face recognition | <a href="./vf203/vf203_face/" target="_blank">View</a> |
