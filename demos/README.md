@@ -2,7 +2,7 @@
     <b>English</b>| <a href="./README_CN.md">中文</a>
 </p>
 
-<h1 align="center">dxdop_demos</h1>
+<h1 align="center">dejaos_demos</h1>
 
 ## Device Application Examples
 The application examples include a variety of open-source code libraries for different scenarios to avoid reinventing the wheel. They also contain blank project templates `xxx_project_template` distributed in the directories of each model.

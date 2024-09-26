@@ -2,7 +2,7 @@
     <a href="./README.md">English</a>| <b>中文</b>
 </p>
 
- <h1 align="center">dxdop_examples_ui</h1>
+ <h1 align="center">dejaos_examples_ui</h1>
 
 ## UI 组件
 

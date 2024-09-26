@@ -2,7 +2,7 @@
     <b>English</b>| <a href="./README_CN.md">中文</a>
 </p>
 
-<h1 align="center">dxdop_component</h1>
+<h1 align="center">dejaos_component</h1>
 
 ## Component Description
 The components are used to assist business development, control hardware capabilities, and enhance development convenience.

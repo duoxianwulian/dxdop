@@ -2,14 +2,14 @@
     <b>English</b>| <a href="./README_CN.md">中文</a>
 </p>
 
-<h1 align="center">duoxian Device Open Platform</h1>
+<h1 align="center">Deja OS</h1>
 
 📒 Overview and Summary
 -------------
 
-**Platform Overview**
+**Overview**
 
-dxdop is an embedded secondary development software platform that uses JavaScript as the primary development language to reduce development costs and difficulty. The vision is to make embedded development very simple, and it performs excellently in many terminal scenarios.
+dejaOS is an embedded device JavaScript runtime environment. that uses JavaScript as the primary development language to reduce development costs and difficulty. It make embedded development very simple, and it performs excellently in many terminal scenarios.
 
 **Rich Features** 
 
@@ -21,7 +21,7 @@ dxdop is an embedded secondary development software platform that uses JavaScrip
 
 **Hardware Environment**
 
-- The platform is currently only adapted for secondary development on <a href="https://koodle.cn/" target="_blank">Koodle IoT devices</a>.
+- The dejaOS is currently only adapted for secondary development on <a href="https://koodle.cn/" target="_blank">Koodle IoT devices</a>.
 
 **Tools and Services**
 
@@ -33,7 +33,7 @@ dxdop is an embedded secondary development software platform that uses JavaScrip
 🚀 Technical Background
 -------
 
-The platform is supported by a framework based on Linux, quickjs, and LVGL, which improves development efficiency while maintaining extremely high operational efficiency.
+The dejsOS is supported by a framework based on Linux, quickjs, and LVGL, which improves development efficiency while maintaining extremely high operational efficiency.
 
 **Linux**: Possesses capabilities for Linux system processes, threads, and resource scheduling
 
@@ -43,18 +43,18 @@ The platform is supported by a framework based on Linux, quickjs, and LVGL, whic
 
 <br>
 
-▶️ Using dxdop
+▶️ Using dejaOS
 ---------------
 
-This list will guide you step by step to start using dxdop.
+This list will guide you step by step to start using dejaOS.
 
-**Get Familiar with dxdop**
+**Get Familiar with dejaOS**
 
-1. View <a href="https://www.youtube.com/@dxdop_iot" target="_blank">demo</a> to understand the output of dxdop
+1. View <a href="https://www.youtube.com/@dxdop_iot" target="_blank">demo</a> to understand the output of dejaOS
 2. Read <a href="./src/README.md" target="_blank">documentation</a> to get familiar with component capabilities
 3. Get familiar with <a href="./demos/README.md" target="_blank">scaffolding</a> project construction and code framework
 
-**Start Using dxdop**
+**Start Using dejaOS**
 
 4. Purchase a <a href="https://koodle.cn/" target="_blank">development board</a>
 5. Install the <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">debugging environment</a>

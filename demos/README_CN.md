@@ -2,10 +2,10 @@
     <a href="./README.md">English</a>| <b>中文</b>
 </p>
 
- <h1 align="center">dxdop_demos</h1>
+ <h1 align="center">dejaos_demos</h1>
 
 ## 设备应用示例
-应用示例包含多种场景开源代码库，避免重复造轮子，同时包含空白项目模板 `xxx_project_template` 分布在各型号目录下。
+应用示例包含多种场景开源代码库，避免重复造轮子，同时包含空白项目模板 `xxx_project_template` 分布在各型号目录下.
 
 
 ## 应用列表

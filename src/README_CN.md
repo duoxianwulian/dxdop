@@ -2,10 +2,10 @@
     <a href="./README.md">English</a>| <b>中文</b>
 </p>
 
- <h1 align="center">dxdop_component</h1>
+ <h1 align="center">dejaos_component</h1>
 
 ## 组件描述
-组件用于辅助业务开发、用于控制硬件能力，增强业务开发便利性。
+组件用于辅助业务开发、用于控制硬件能力，增强业务开发便利性.
 
 ## 组件列表
 | 组件 | 名称  | 描述 |
