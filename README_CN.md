@@ -51,11 +51,32 @@ dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率
 <br>
 
 
+▶️ 使用 dejaOS
+---------------
+
+此列表将指导您逐步开始使用 dejaOS.
+
+
+**熟悉 dejaOS** 
+
+1. 查看 <a href="https://www.youtube.com/@dxdop_iot" target="_blank">演示</a> ，了解 dejaOS 产出效果
+2. 阅读 <a href="./src/README_CN.md" target="_blank">文档</a> 熟悉组件能力使用
+3. 熟悉 <a href="./demos/README_CN.md" target="_blank">脚手架 </a> 项目构建及代码框架
+
+
+**开始使用 dejaOS**
+
+4. 选购 <a href="https://koodle.cn/" target="_blank">开发板</a>
+5. 安装 <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">调试环境</a>
+6. 尝试一些 <a href="./examples/" target="_blank">组件示例</a>
+7. 完成 <a href="" target="_blank">项目开发调试</a>
+
+<br>
+
 ▶️ 学习 dejaOS
 ---------------
 
 此列表将指导您逐步开始了解 dejaOS.
-
 
 **快速上手** 
 - [dejaOS 介绍](docs/introduction_CN.md)
@@ -63,12 +84,11 @@ dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率
 - [dejaOS 配套设备介绍](docs/devices_CN.md)
 - [dejaOS 的 JavaScript 引擎介绍](docs/quickjs_CN.md)
 - [dejaOS 的 GUI 引擎介绍](docs/lvgl_CN.md)
-- dejaOS 的 module 介绍
-- dxide 的介绍
-- dejaOS 项目结构介绍
+- [dejaOS 的 module 介绍](docs/module_CN.md)
+- [DXIDE 的介绍](docs/dxide_CN.md)
+- [dejaOS 项目结构介绍](docs/project_CN.md)
 - dxLogger 及调试介绍
-- dejaOS 开发一个简单示例(以刷卡屏幕变色为例子）
-- deja脚手架
+- dejaOS 开发一个简单示例
 
 **多线程(worker)**
 - worker的概念和基本原始用法
@@ -114,30 +134,6 @@ dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率
 - 时间同步介绍
 
 **module开发介绍**
-<br>
-
-▶️ 使用 dejaOS
----------------
-
-此列表将指导您逐步开始使用 dejaOS.
-
-
-**熟悉 dejaOS** 
-
-1. 查看 <a href="https://www.youtube.com/@dxdop_iot" target="_blank">演示</a> ，了解 dejaOS 产出效果
-2. 阅读 <a href="./src/README_CN.md" target="_blank">文档</a> 熟悉组件能力使用
-3. 熟悉 <a href="./demos/README_CN.md" target="_blank">脚手架 </a> 项目构建及代码框架
-
-
-**开始使用 dejaOS**
-
-4. 选购 <a href="https://koodle.cn/" target="_blank">开发板</a>
-5. 安装 <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">调试环境</a>
-6. 尝试一些 <a href="./examples/" target="_blank">组件示例</a>
-7. 完成 <a href="" target="_blank">项目开发调试</a>
-
-
-
 <br>
 
 🤖 示例
