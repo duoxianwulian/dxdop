@@ -87,11 +87,10 @@ dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率
 - [dejaOS 的 module 介绍](docs/module_CN.md)
 - [DXIDE 的介绍](docs/dxide_CN.md)
 - [dejaOS 项目结构介绍](docs/project_CN.md)
-- dxLogger 及调试介绍
-- dejaOS 开发一个简单示例
+- [dxLogger 及调试介绍](docs/logger_CN.md)
 
 **多线程(worker)**
-- worker的概念和基本原始用法
+- worker的概念
 - 异步操作
 - eventbus介绍
 - dxmap和dxqueue介绍
