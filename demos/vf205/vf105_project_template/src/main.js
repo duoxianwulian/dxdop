@@ -15,14 +15,10 @@ let topics = [
     dxNet.STATUS_CHANGE
 ]
 
-function initController() {
-    driver.gpio.init()
-    driver.alsa.init()
-    driver.capturer.init()
-    driver.face.init()
+function startWorkers() {
+    // 只能在主线程创建子线程
     driver.uart485.init()
     driver.uartCode.init()
-    driver.net.init()
 }
 
 (function () {

@@ -12,17 +12,16 @@ let topics = [
     dxNet.STATUS_CHANGE
 ]
 
-function initController() {
-    driver.gpio.init()
+function startWorkers() {
+    // 只能在主线程创建子线程
     driver.uart4850.init()
     driver.uart4851.init()
     driver.uart4852.init()
-    driver.net.init()
 }
 
 (function () {
 
-    initController()
+    startWorkers()
 
     bus.newWorker('controller', '/app/code/src/controller.js')
     
