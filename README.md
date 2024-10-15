@@ -14,7 +14,7 @@ dejaOS is an embedded device JavaScript runtime environment. that uses JavaScrip
 **Rich Features** 
 
 - Hardware control for gpio, pwm, rs485, rs232, usb, wiegand, capturer, net, watchdog, alsa, etc.
-- Network protocols including tcp, tcpserver, mqtt, udp, http, webserver
+- Network protocols including tcp, tcpserver, mqtt, udp, http, webserver. OSDP
 - Allows drawing LVGL screen UI using JS, supporting all native LVGL capabilities
 - Rich peripheral access (card reader, fingerprint, Bluetooth, face recognition), encryption and decryption (base64, aes, md5, hmac, crc, bcc) and other supporting component libraries
 - Supports development using embedded native C libraries

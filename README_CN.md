@@ -17,7 +17,7 @@ dejaOS 是一个针对嵌入式设备的 JavaScript 运行时环境，它使用J
 **功能丰富** 
 
 - gpio、pwm、rs485、rs232、usb、wiegand、capturer、net、watchdog、alsa等硬件控制
-- tcp、tcpserver、mqtt、udp、http、webserver网络协议
+- tcp、tcpserver、mqtt、udp、http、webserver网络协议，OSDP协议
 - 可以用JS绘制屏幕UI，支持所有LVGL原生能力
 - 有着丰富的外设接入（刷卡、指纹、蓝牙、人脸识别）、加解密（base64、aes、md5、hmac、crc、bcc）等配套组件库
 - 支持植入原生C库的方式开发
