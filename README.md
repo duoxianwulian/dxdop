@@ -4,64 +4,110 @@
 
 <h1 align="center">Deja OS</h1>
 
-📒 Overview and Summary
+📒 Overview
 -------------
 
-**Overview**
+**Introduction**
 
-dejaOS is an embedded device JavaScript runtime environment. that uses JavaScript as the primary development language to reduce development costs and difficulty. It make embedded development very simple, and it performs excellently in many terminal scenarios.
+dejaOS is a JavaScript runtime environment designed for embedded devices, enabling low-cost, low-spec smart devices to run JavaScript code. It uses JavaScript as the development language, reducing costs and simplifying development. It make embedded application development easier. It has already shown excellent performance in various IoT scenarios.
 
 **Rich Features** 
 
-- Hardware control for gpio, pwm, rs485, rs232, usb, wiegand, capturer, net, watchdog, alsa, etc.
-- Network protocols including tcp, tcpserver, mqtt, udp, http, webserver. OSDP
-- Allows drawing LVGL screen UI using JS, supporting all native LVGL capabilities
-- Rich peripheral access (card reader, fingerprint, Bluetooth, face recognition), encryption and decryption (base64, aes, md5, hmac, crc, bcc) and other supporting component libraries
-- Supports development using embedded native C libraries
+dejaOS provides a comprehensive set of [JavaScript Module](./src/README.md), including:
+
+- `Hardware Interface Module`: GPIO, PWM, UART, RS-485, RS-232, USB, Wiegand, Watchdog, Capturer, ALSA, NFC, QRCode, BLE, Face Recognition, etc.
+- `Networking and Communication Protocol Module`: Net, TCP, TCP Server, MQTT, UDP, HTTP, Web Server, OSDP, etc.
+- `Graphics Module`: Supports drawing GUI screens using JavaScript, compatible with all LVGL native capabilities.
+- `Utility Module`: Threads, encryption/decryption, logging, EventBus, NTP, SQLite, etc.
+- `Third-Party Module`: Supports using pure JavaScript third-party module with import (ESM).
+- `Native C Library Support`: Allows development through embedded native C libraries wrapped in JavaScript.
 
 **Hardware Environment**
 
-- The dejaOS is currently only adapted for secondary development on <a href="https://koodle.cn/" target="_blank">Koodle IoT devices</a>.
+Currently, dejaOS is compatible with various smart devices primarily based on Ingenic and EeasyTech chips, with more being added continuously. Refer to [the device list](./docs/devices.md).
 
-**Tools and Services**
+**Development Process**
 
-- Development and debugging using VScode and the <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">DXIDE</a> plugin
-- Includes <a href="./docs/ui/README.md" target="_blank">UI component examples</a> 、 <a href="./examples/dw200/" target="_blank">driver component examples</a> and <a href="./src/README.md" target="_blank">component source code</a>, as well as <a href="./demos/README.md" target="_blank">open source project demos</a>
+The development process for dejaOS app is as follows:
 
-<br>
+- Prepare Development Environment: Install Node.js (20+), VSCode, and [DXIDE (VSCode plugin)](https://marketplace.visualstudio.com/items?itemName=dxide.dxide) on your computer.
+- Prepare the Device: Purchase a development device and connect it to VSCode using a USB cable.
+- Development and Debugging: Write JavaScript code in VSCode, sync it in real-time to see results, and check the runtime logs in VSCode.
+- Build and Publish: Build a `DPK` installation package in VSCode, purchase production devices, and use the [DPK installation tool]() to install it on the production devices via serial connection.
+
 
 🚀 Technical Background
 -------
 
-The dejsOS is supported by a framework based on Linux, quickjs, and LVGL, which improves development efficiency while maintaining extremely high operational efficiency.
+dejaOS is built on the foundations of Mip/ARMLinux, QuickJS, and LVGL, enhancing development efficiency while maintaining high runtime performance.
 
-**Linux**: Possesses capabilities for Linux system processes, threads, and resource scheduling
+**Mip/ARMLinux**: Embedded Linux with system processes, threads, and resource scheduling capabilities.
 
-**quickjs**: A small, fast JS engine supporting ES2023 specifications with asynchronous capabilities
+**QuickJS**: A compact and fast JavaScript engine that supports the ES2023 standard.
 
-**LVGL**: The most popular free open-source embedded graphics library, allowing for the easy drawing of beautiful UIs using JS
+**LVGL**: The most popular free open-source embedded graphics library, allowing easy creation of beautiful UIs using C, while dejaOS enables development with JavaScript.
 
-<br>
 
-▶️ Using dejaOS
+▶️ Learning dejaOS
 ---------------
 
-This list will guide you step by step to start using dejaOS.
+This list will guide you step by step to get started with dejaOS.
 
-**Get Familiar with dejaOS**
+**Quick Start**
+- [Introduction to dejaOS](docs/introduction.md)
+- [How to Install dejaOS](docs/install.md)
+- [Introduction to dejaOS-Compatible Devices](docs/devices.md)
+- [Introduction to dejaOS's JavaScript Engine](docs/quickjs.md)
+- [Introduction to dejaOS's GUI Engine](docs/lvgl.md)
+- [Introduction to dejaOS Modules](docs/module.md)
+- [Introduction to DXIDE](docs/dxide.md)
+- [Introduction to dejaOS Project Structure](docs/project.md)
+- [dxLogger and Debugging Introduction](docs/logger.md)
 
-1. View <a href="https://www.youtube.com/@dxdop_iot" target="_blank">demo</a> to understand the output of dejaOS
-2. Read <a href="./src/README.md" target="_blank">documentation</a> to get familiar with component capabilities
-3. Get familiar with <a href="./demos/README.md" target="_blank">scaffolding</a> project construction and code framework
+**Multithreading (Worker)**
+- Concept of Workers
+- Asynchronous Operations
+- Introduction to EventBus
+- Introduction to dxMap and dxQueue
+- Introduction to Thread Pools
 
-**Start Using dejaOS**
+**GUI Introduction**
+- Basic Concepts of GUI
+- Communication between GUI and Other Threads
+- Introduction to dxUI Components
+- Several Basic UI Examples
 
-4. Purchase a <a href="https://koodle.cn/" target="_blank">development board</a>
-5. Install the <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">debugging environment</a>
-6. Try some <a href="./examples/" target="_blank">component examples</a>
-7. Complete <a href="" target="_blank">project development and debugging</a>
+**File Operations**
+- File System on the Device
+- Reading and Writing Text Files
+- Reading and Writing Binary Files
 
-<br>
+**Hardware Interfaces**
+- Introduction to GPIO
+- Introduction to PWM
+- Introduction to UART
+- Introduction to QR Code
+- Introduction to NFC
+- Introduction to Bluetooth
+- Introduction to Audio
+
+**Network Interfaces and Protocols**
+- Introduction to Network Types
+- Introduction to TCP Module
+- Introduction to UDP Module
+- Introduction to HTTP Module
+- Introduction to MQTT Module
+
+**Application Upgrades and Releases**
+- Introduction to Application Upgrades
+- Introduction to Application Production and Release
+
+**Database and Miscellaneous**
+- Introduction to SQLite and Basic Usage
+- Introduction to Watchdog
+- Introduction to Time Synchronization
+
+**Module Development Introduction**
 
 🤖 Examples
 -------

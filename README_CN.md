@@ -10,68 +10,45 @@
 
 **概述**
 
-dejaOS 是一个针对嵌入式设备的 JavaScript 运行时环境，它使用JS语言作为主开发语言，减少开发成本，降低开发难度，愿景是让嵌入式开发变的很简单，它应用在许多终端场景有着出色的表现.
-
-
+dejaOS 是一个针对嵌入式设备的 JavaScript 运行时环境，使低配置、低成本的智能设备能够运行 JavaScript 代码。它使用 JavaScript 作为开发语言，减少开发成本，降低开发难度，愿景是让嵌入式应用开发变得更加简单。dejaOS 已经在许多IoT场景中表现出色。
 
 **功能丰富** 
 
-- gpio、pwm、rs485、rs232、usb、wiegand、capturer、net、watchdog、alsa等硬件控制
-- tcp、tcpserver、mqtt、udp、http、webserver网络协议，OSDP协议
-- 可以用JS绘制屏幕UI，支持所有LVGL原生能力
-- 有着丰富的外设接入（刷卡、指纹、蓝牙、人脸识别）、加解密（base64、aes、md5、hmac、crc、bcc）等配套组件库
-- 支持植入原生C库的方式开发
+dejaOS 提供了丰富的 [JavaScript 库](./src/README_CN.md)支持，包含：
+
+- `硬件接口库`：GPIO、PWM、UART、RS-485、RS-232、USB、Wiegand、Watchdog、Capturer、ALSA、NFC、QRCode、BLE、人脸识别等
+- `网络与通信协议库`：Net、TCP、TCP Server、MQTT、UDP、HTTP、Web Server、OSDP等
+- `图形库`：支持用 JavaScript 绘制屏幕 GUI，并兼容所有 LVGL 原生能力
+- `工具库`：线程、加解密、日志、EventBus、NTP、SQLite 等
+- `第三方库`：支持 `import` 使用纯 JavaScript 的第三方库（ESM 方式）
+- `原生 C 库支持`：支持通过植入原生 C 库，用 JS 包装的方式进行开发
 
 
 **硬件环境**
 
-- 目前 dejaOS 仅适配 <a href="https://koodle.cn/" target="_blank">酷豆物联设备</a> 做二次开发.
+- 目前 dejaOS 适配多款以Ingenic、EeasyTech为主芯片的智能设备，还在持续增加中，参考[设备列表](./docs/devices_CN.md).
 
 
-**工具和服务**
+**开发流程**
 
-- 使用 VScode && <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">DXIDE</a> 插件 开发调试
+开发 dejaOS 应用的流程如下：
+- 开发环境准备：电脑上安装 Nodejs(20+),VSCode, [DXIDE(VSCode plugin)](https://marketplace.visualstudio.com/items?itemName=dxide.dxide)
+- 设备准备：购买开发设备,USB 线连接 VSCode 和设备
+- 开发和调试：在 VSCode 上编写 JavaScript 代码，实时同步到设备上查看效果，在 VSCode 上查看运行日志
+- Build和发布：在 VSCode 上 build 成 DPK 安装包，购买生产设备，使用 [DPK 安装工具]()通过串口线安装到生产设备上
 
-- 包含 <a href="./docs/ui/README_CN.md" target="_blank">UI组件示例</a> 、 <a href="./examples/dw200/" target="_blank">驱动组件示例</a> 以及 <a href="./src/README_CN.md" target="_blank">组件源码</a>，<a href="./demos/README_CN.md" target="_blank">开源项目demo</a>
-
-<br>
 
 🚀 技术背景
 -------
 
-dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率的同时，保有超高的运行效率.
+dejaOS 以Mip/ARMLinux、Quickjs、LVGL为基础框架支撑，提高开发效率的同时，保有超高的运行效率.
 
-**Linux**：具备Linux系统进程、线程、资源调度能力
+**Mip/ARMLinux**：嵌入式Linux，系统进程、线程、资源调度能力
 
-**quickjs**：支持 ES2023规范，且小巧快速的JS引擎，具备异步
+**Quickjs**：支持 ES2023规范，且小巧快速的JS引擎
 
-**LVGL**：LVGL 是最流行的免费开源嵌入式图形库，可以使用JS轻松绘制漂亮的UI
+**LVGL**：LVGL 是最流行的免费开源嵌入式图形库，可以使用 C 轻松绘制漂亮的UI，dejaOS可以使用 JavaScript 
 
-
-<br>
-
-
-▶️ 使用 dejaOS
----------------
-
-此列表将指导您逐步开始使用 dejaOS.
-
-
-**熟悉 dejaOS** 
-
-1. 查看 <a href="https://www.youtube.com/@dxdop_iot" target="_blank">演示</a> ，了解 dejaOS 产出效果
-2. 阅读 <a href="./src/README_CN.md" target="_blank">文档</a> 熟悉组件能力使用
-3. 熟悉 <a href="./demos/README_CN.md" target="_blank">脚手架 </a> 项目构建及代码框架
-
-
-**开始使用 dejaOS**
-
-4. 选购 <a href="https://koodle.cn/" target="_blank">开发板</a>
-5. 安装 <a href="https://marketplace.visualstudio.com/items?itemName=dxide.dxide" target="_blank">调试环境</a>
-6. 尝试一些 <a href="./examples/" target="_blank">组件示例</a>
-7. 完成 <a href="" target="_blank">项目开发调试</a>
-
-<br>
 
 ▶️ 学习 dejaOS
 ---------------
@@ -133,7 +110,7 @@ dejaOS 以定制Linux、quickjs、LVGL为基础框架支撑，提高开发效率
 - 时间同步介绍
 
 **module开发介绍**
-<br>
+
 
 🤖 示例
 -------
@@ -299,5 +276,5 @@ mqtt.init(mqttAddr,clientId,username,password,prefix,qos,willTopic,willMessage,i
 🤝 服务
 -------
 
-如有任何问题，<a href="https://koodle.cn/index.php/contact-us/" target="_blank">联系我们 </a> ，告诉我们如何提供帮助.
+如有任何问题，联系我们 service@dxiot.com ，告诉我们如何提供帮助.
 
