@@ -10,20 +10,16 @@ import dxUart from '../dxmodules/dxUart.js'
 
 let topics = [dxFace.RECEIVE_MSG, dxUart.VG.RECEIVE_MSG+driver.uart485.id, dxNet.STATUS_CHANGE]
 
-function initController() {
-    driver.gpio.init()
-    driver.alsa.init()
-    driver.capturer.init()
-    driver.face.init()
+function startWorkers() {
+    // 只能在主线程创建子线程
     driver.uart485.init()
-    driver.net.init()
 }
 
 (function () {
 
     screen.init()
 
-    initController()
+    startWorkers()
 
     bus.newWorker('controller', '/app/code/src/controller.js')
     

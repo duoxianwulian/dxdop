@@ -4,6 +4,7 @@ import driver from './driver.js'
 
 
 function run() {
+    initController()
     std.setInterval(() => {
         try {
             loop()
@@ -20,6 +21,11 @@ try {
     logger.error(error)
 }
 
+
+function initController() {
+    driver.gpio.init()
+    driver.net.init()
+}
 
 function loop() {
     driver.net.loop()
