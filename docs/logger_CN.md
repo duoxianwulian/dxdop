@@ -1,5 +1,5 @@
 <p align="right">
-    <a href="./lvgl.md">English</a>| <b>中文</b>
+    <a href="./logger.md">English</a>| <b>中文</b>
 </p>
 
 # dxLogger 及调试介绍

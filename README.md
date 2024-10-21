@@ -269,4 +269,4 @@ mqtt.init(mqttAddr,clientId,username,password,prefix,qos,willTopic,willMessage,i
 <br>
 
 🤝 Services
-If you have any questions, <a href="https://koodle.cn/index.php/contact-us/" target="_blank">contact us</a> and let us know how we can help.
+If you have any questions,contact us  service@dxiot.com and let us know how we can help.
