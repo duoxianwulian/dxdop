@@ -2,6 +2,8 @@
     <b>English</b>| <a href="./app_CN.md">中文</a>
 </p>
 
+# App Packaging、Installation、Upgrade
+
 ## Overview
 
 Applications on dejaOS need to be packaged and installed on other devices after development. Taking DW200 as an example, the typical process is as follows:
@@ -12,7 +14,7 @@ Applications on dejaOS need to be packaged and installed on other devices after 
 
 There are differences in packaging, installation, and upgrading between the early and latest versions, which we will look at separately.
 
-# Application Packaging
+## 1. Application Packaging
 
 ### Early Version
 
@@ -26,7 +28,7 @@ The latest version can automatically generate a packaging file by clicking the `
 
 ![alt text](image/app_zip2.png)
 
-# Application Installation
+## 2. Application Installation
 
 ### Early Version
 
@@ -61,7 +63,7 @@ The latest version is much simpler:
  - Select the dpk file
  - Click install
 
-# Application Upgrade
+## 3. Application Upgrade
 
 Application upgrades are implemented around the dxOTA component, which involves placing the new installation package at a download address on the internet and pushing this address to the device via QR code or other means. The device then downloads it via the network. However, the detailed process is encapsulated in the dxOTA component, and developers only need to call one function.
 
