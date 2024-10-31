@@ -10,6 +10,20 @@ The design intent of dejaOS is to simplify the embedded development process, not
 
 However, the number of application developers far exceeds that of embedded developers. If these developers can easily develop embedded devices just like developing business applications, the rapid development of the Internet of Things (IoT) will be just around the corner. dejaOS aims to fill this gap and promote the popularization and innovation of embedded development.
 
+# OS 和 App
+dejaOS can be considered an operating system based on embedded Linux, enhanced with the capability to run JavaScript applications. Its mechanism is similar to that of Android and iOS, and the development process is also comparable:
+
+1. Code is developed in an IDE and synchronized to the device via USB for execution and debugging.
+2. It is built into an application installation package; Android installation packages are .apk, while dejaOS installation packages are .dpk.
+3. Android apps can be published to app markets, allowing users to download them from the market or install them via certain PC tools. Currently, dejaOS provides installation tools for installing apps from a computer to other devices, with plans to offer an app market in the future.
+
+Differences Between dejaOS and Mobile Operating Systems + Apps: 
+1. dejaOS can run on devices with very low hardware specifications, requiring a minimum storage of about 5MB and a minimum memory of around 2MB; if there is no screen, the requirements can be even lower.
+2. Due to hardware limitations, only one app can be installed and run at a time; however, with slightly higher specifications, it is feasible to run multiple apps.
+3. Due to hardware limitations, dejaOS does not have its own user interface, unlike Android, which allows for many operations directly through its interface.
+4. Due to hardware limitations, dejaOS has different release for different devices since it cannot bundle all necessary drivers like mobile operating systems.
+
+# Code Sample
 Let's look at a simple example. For instance, if our device supports QR code scanning, we place a QR code in front of the device, allowing it to recognize the content within the QR code and respond accordingly:
 
 ``` js

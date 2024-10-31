@@ -28,6 +28,10 @@ Typically, before the first launch of the application, you need to use `syncAll`
 You can check the logs in the `OUTPUT` tab at the bottom of the VSCode main interface.  
 ![Log Output](image/ide-3.png)  
 
+## Shortcuts
+![alt text](image/ide-5.png)
+In this case, Ctrl + Shift + T performs code sync, stops the app, and runs the app—all in one, making it very convenient.
+
 ## Visual GUI Editing  
 In VSCode, you can also generate GUIs through visual drag-and-drop functionality, as shown below:  
 ![Visual GUI Editing](image/ide-4.png)  

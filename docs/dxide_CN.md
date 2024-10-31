@@ -26,6 +26,10 @@ DXIDE 是基于 VSCode 的插件，安装后，要触发插件的功能，需要
 在 VSCode 主界面的下的 `OUTPUT` 标签栏里查看
 ![alt text](image/ide-3.png)
 
+## 快捷方式
+![alt text](image/ide-5.png)
+其中ctrl+shirt+T 可以实现 同步代码+停止应用+运行应用，非常方便
+
 ## 可视化编辑 GUI
 在 VSCode 下还支持通过可视化拖拽的方式生成 GUI ，入下图
 
