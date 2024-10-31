@@ -63,6 +63,7 @@ This list will guide you step by step to get started with dejaOS.
 - [Introduction to DXIDE](docs/dxide.md)
 - [Introduction to dejaOS Project Structure](docs/project.md)
 - [dxLogger and Debugging Introduction](docs/logger.md)
+- [App Packaging、Installation、Upgrade](docs/app.md)
 
 **Multithreading (Worker)**
 - Concept of Workers
@@ -97,10 +98,6 @@ This list will guide you step by step to get started with dejaOS.
 - Introduction to UDP Module
 - Introduction to HTTP Module
 - Introduction to MQTT Module
-
-**Application Upgrades and Releases**
-- Introduction to Application Upgrades
-- Introduction to Application Production and Release
 
 **Database and Miscellaneous**
 - Introduction to SQLite and Basic Usage

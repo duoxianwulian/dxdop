@@ -65,6 +65,7 @@ dejaOS 以Mip/ARMLinux、Quickjs、LVGL为基础框架支撑，提高开发效�
 - [DXIDE 的介绍](docs/dxide_CN.md)
 - [dejaOS 项目结构介绍](docs/project_CN.md)
 - [dxLogger 及调试介绍](docs/logger_CN.md)
+- [应用打包、安装和升级](docs/app_CN.md)
 
 **多线程(worker)**
 - worker的概念
@@ -99,10 +100,6 @@ dejaOS 以Mip/ARMLinux、Quickjs、LVGL为基础框架支撑，提高开发效�
 - UDP模块介绍
 - HTTP模块介绍
 - MQTT模块介绍
-
-**应用升级和发布**
-- 应用升级介绍
-- 应用生产发布介绍
 
 **数据库及杂项**
 - sqlite介绍及基本使用
