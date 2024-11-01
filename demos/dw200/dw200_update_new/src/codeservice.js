@@ -14,7 +14,6 @@ let code = {
         dxCode.worker.loop()
     }
 }
-
 let net={
     init:function(){
         dxNet.worker.beforeLoop({type:dxNet.TYPE.ETHERNET, dhcp:dxNet.DHCP.DYNAMIC,macaddr: common.getUuid2mac(),})
