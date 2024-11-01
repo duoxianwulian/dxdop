@@ -11,7 +11,7 @@ dejaOS requires specific devices to run, and it is currently compatible mainly w
 
 ## Development Devices and Production Devices  
 There is not much difference between development devices and production devices, except that certain development device models come with an additional USB cable. This cable is essential for communication with VSCode, enabling real-time code transmission and debugging.  
-Another difference lies in the firmware: development devices include built-in debugging applications.  
+Another difference is that the firmware applications within the devices vary. The production device comes with a built-in app that automatically launches and enters the app interface upon startup. However, the development device does not have a built-in app and will not display any interface when it starts up. 
 
 ## Microprocessor Support Categories  
 1. MIPS architecture [Ingenic](https://www.ingenic.com.cn/) chips  
