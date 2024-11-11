@@ -1,3 +1,7 @@
+<p align="right">
+    <a href="./app.md">English</a>| <b>中文</b>
+</p>
+
 # 应用打包、安装和升级
 ## 概述
 

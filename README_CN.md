@@ -66,6 +66,7 @@ dejaOS 以Mip/ARMLinux、Quickjs、LVGL为基础框架支撑，提高开发效�
 - [dejaOS 项目结构介绍](docs/project_CN.md)
 - [dxLogger 及调试介绍](docs/logger_CN.md)
 - [应用打包、安装和升级](docs/app_CN.md)
+- [dejaOS 系统模式介绍](docs/mode_CN.md)
 
 **多线程(worker)**
 - worker的概念

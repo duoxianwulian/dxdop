@@ -64,6 +64,7 @@ This list will guide you step by step to get started with dejaOS.
 - [Introduction to dejaOS Project Structure](docs/project.md)
 - [dxLogger and Debugging Introduction](docs/logger.md)
 - [App Packaging、Installation、Upgrade](docs/app.md)
+- [dejaOS System Mode Overview](docs/mode.md)
 
 **Multithreading (Worker)**
 - Concept of Workers
