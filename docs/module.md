@@ -3,14 +3,14 @@
 </p>
 
 # Introduction to Modules in dejaOS  
-The module import in dejaOS uses the `import` statement to bring in functionalities from other modules, while modules are exported using `export`. This method is very intuitive for developers familiar with JavaScript. For detailed information, please refer to the [relevant documentation](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import).  
+The module import in dejaOS uses the `import` statement to bring in functionalities from other modules(ES6 module import), while modules are exported using `export`. This method is very intuitive for developers familiar with JavaScript. For detailed information, please refer to the [relevant documentation](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import).  
 
 > All modules in dejaOS are prefixed with `dx`.  
 
 ## Module Management:  
 In terms of module management, dejaOS does not utilize the most commonly used JavaScript package manager, `npm`. The main reason for this is that applications on embedded devices typically do not require many third-party libraries. Since some modules are system-related (such as C/C++), these modules need to be recompiled for specific devices. Consequently, most applications rely on the built-in modules of dejaOS and depend on our own module management system.  
 
-If third-party modules are needed, dejaOS only supports pure JavaScript modules. Developers can manually copy and download these modules into their projects. In the future, we also plan to integrate common third-party modules into dejaOS’s module management system for easier access.  
+If third-party modules are needed, dejaOS only supports pure JavaScript modules and only supports ES6 module import. Developers can manually copy and download these modules into their projects. In the future, we also plan to integrate common third-party modules into dejaOS’s module management system for easier access.  
 
 We provide a visual interface for module selection. The DXIDE plugin for VSCode supports selecting different modules or their versions via a web page, greatly simplifying the developer's workflow.  
 

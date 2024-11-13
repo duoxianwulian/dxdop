@@ -3,14 +3,14 @@
 </p>
 
 # dejaOS 的 module 介绍
-dejaOS 的模块导入使用 `import` 语句来引入其他模块的功能, 模块导出使用 `export` ,这种方式对熟悉 JavaScript 的开发者来说非常直观。详细的说明可以参考[相关文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
+dejaOS 的模块导入使用 `import` 语句来引入其他模块的功能(ES6 module import), 模块导出使用 `export` ,这种方式对熟悉 JavaScript 的开发者来说非常直观。详细的说明可以参考[相关文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
 
 > dejaOS 的所有 module 都是以 `dx` 开头
 
 ## 模块管理：
 在模块管理方面，dejaOS 并没有使用 JavaScript 最常用的 `npm` ，主要原因是嵌入式设备内的应用通常不需要依赖太多第三方库。由于涉及到与系统相关的模块（如 C/C++），这些模块需要基于特定设备重新编译，因此我们绝大部分应用都是使用 dejaOS 内置的模块，并依赖自己的模块管理系统。
 
-如果需要使用第三方模块，dejaOS 仅支持纯 JavaScript 的模块。开发者可以手动拷贝并下载这些模块到自己的项目中。未来，我们也计划将常见的第三方模块整合进 dejaOS 的模块管理系统，以便于用户使用。
+如果需要使用第三方模块，dejaOS 仅支持纯 JavaScript 的模块且只支持 ES6 module import。开发者可以手动拷贝并下载这些模块到自己的项目中。未来，我们也计划将常见的第三方模块整合进 dejaOS 的模块管理系统，以便于用户使用。
 
 我们提供了可视化的界面来选择模块，VSCode 的 DXIDE 插件支持基于 Web 页面选择不同的模块或其版本，极大地方便了开发者的工作。
 
