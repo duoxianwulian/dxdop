@@ -24,7 +24,7 @@ dejaOS provides a comprehensive set of [JavaScript Module](./src/README.md), inc
 
 **Hardware Environment**
 
-Currently, dejaOS is compatible with various smart devices primarily based on Ingenic and EeasyTech chips, with more being added continuously. Refer to [the device list](./docs/devices.md).
+Currently, dejaOS is compatible with various smart devices primarily based on Ingenic and EeasyTech chips, with more being added continuously.
 
 **Development Process**
 

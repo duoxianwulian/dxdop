@@ -26,7 +26,7 @@ dejaOS 提供了丰富的 [JavaScript 库](./src/README_CN.md)支持，包含：
 
 **硬件环境**
 
-- 目前 dejaOS 适配多款以Ingenic、EeasyTech为主芯片的智能设备，还在持续增加中，参考[设备列表](./docs/devices_CN.md).
+- 目前 dejaOS 适配多款以Ingenic、EeasyTech为主芯片的智能设备，还在持续增加中
 
 
 **开发流程**
