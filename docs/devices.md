@@ -1,5 +1,5 @@
 <p align="right">
-    <b>English</b>| <a href="./device_CN.md">中文</a>
+    <b>English</b>| <a href="./devices_CN.md">中文</a>
 </p>
 
 # Introduction to dejaOS-Compatible Devices  
