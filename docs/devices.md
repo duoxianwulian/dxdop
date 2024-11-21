@@ -7,7 +7,7 @@ Before understanding dejaOS, we need to distinguish the concept of a development
 
 In contrast, dejaOS is based on mature, industrial-grade hardware, much like developing on a smartphone. These devices have undergone rigorous design and testing, such as waterproofing, dustproofing, and adaptation to extreme temperatures, meeting various industrial standards. Therefore, application developers can develop directly on these devices, and the final product can be smoothly deployed in production environments.  
 
-dejaOS requires specific devices to run, and it is currently compatible mainly with devices from Cool Beans IoT. dejaOS serves as a JavaScript runtime environment, implemented in C/C++ at its core, allowing it to be compiled and run on different SOCs. However, adaptation work is still required for different chips, systems, and modules.  
+dejaOS requires specific devices to run. dejaOS serves as a JavaScript runtime environment, implemented in C/C++ at its core, allowing it to be compiled and run on different SOCs. However, adaptation work is still required for different chips, systems, and modules.  
 
 ## Development Devices and Production Devices  
 There is not much difference between development devices and production devices, except that certain development device models come with an additional USB cable. This cable is essential for communication with VSCode, enabling real-time code transmission and debugging.  
