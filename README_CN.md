@@ -45,7 +45,7 @@ dejaOS 以Mip/ARMLinux、Quickjs、LVGL为基础框架支撑，提高开发效�
 
 **Mip/ARMLinux**：嵌入式Linux，系统进程、线程、资源调度能力
 
-**Quickjs**：支持 ES2023规范，且小巧快速的JS引擎
+**Quickjs**：支持 ES2020规范，且小巧快速的JS引擎
 
 **LVGL**：LVGL 是最流行的免费开源嵌入式图形库，可以使用 C 轻松绘制漂亮的UI，dejaOS可以使用 JavaScript 
 
