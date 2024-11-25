@@ -43,7 +43,7 @@ dejaOS is built on the foundations of Mip/ARMLinux, QuickJS, and LVGL, enhancing
 
 **Mip/ARMLinux**: Embedded Linux with system processes, threads, and resource scheduling capabilities.
 
-**QuickJS**: A compact and fast JavaScript engine that supports the ES2023 standard.
+**QuickJS**: A compact and fast JavaScript engine that supports the ES2020 standard.
 
 **LVGL**: The most popular free open-source embedded graphics library, allowing easy creation of beautiful UIs using C, while dejaOS enables development with JavaScript.
 
