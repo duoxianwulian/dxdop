@@ -48,7 +48,7 @@ dejaOS 提供了丰富的 [JavaScript 库](./src/README_CN.md)支持，包含：
 
 **快速上手**
 
-- 在 VSCode 上使用 JavaScript 代码编写您的[第一个应用程序](./src/demo_CN.md)，实时同步到设备上查看效果，在 VSCode 上查看运行日志
+- 在 VSCode 上使用 JavaScript 代码编写您的[第一个应用程序](./docs/demo_CN.md)，实时同步到设备上查看效果，在 VSCode 上查看运行日志
 
 **Build和发布**
 
