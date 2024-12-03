@@ -101,4 +101,5 @@ After completing the expected requirements, clicking the `package` button will p
 
 # Subsequent steps
 
-If you want to install the packaged application on the production device or upgrade the application, see [App Packaging、Installation、Upgrade](./app.md).
+- If you want to install the packaged application on the production device or upgrade the application, see [App Packaging、Installation、Upgrade](./app.md).
+- Please refer to [Example] (./example.md) for some code examples.
