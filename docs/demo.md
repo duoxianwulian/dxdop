@@ -4,6 +4,8 @@
 
 # Create project
 
+**Create a new project**
+
 Start VSCode and click on the `DejaOS` button in the sidebar, select `Create Project`, name the project, select the path to save the project, and click `Submit`.
 
 ![alt text](image/demo-2.gif)
@@ -11,6 +13,12 @@ Start VSCode and click on the `DejaOS` button in the sidebar, select `Create Pro
 Click the `app.dxproj` file in the directory to open a visual configuration interface, modify the configuration information, click the `Add Module` button, find the required module to add and save.
 
 ![alt text](image/demo-4.gif)
+
+**Import old project**
+
+The project file is usually a compressed file with a `.dpk` extension. After extracting it, launch VSCode and open a new window in the `/app/code` directory of the extracted file.
+
+![alt text](image/demo-12.gif)
 
 # Connect the device and fully synchronize the code
 

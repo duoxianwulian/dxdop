@@ -4,6 +4,8 @@
 
 # 创建项目
 
+**创建新项目**
+
 启动 VSCode 并点击侧边栏的 `DejaOS` 按钮，选择 `Create Project`，为项目命名，选择项目存放路径，点击 `Submit`
 
 ![alt text](image/demo-1.gif)
@@ -11,6 +13,12 @@
 点击目录下的 `app.dxproj` 文件，打开一个可视化配置界面，修改配置信息后点击 `Add Module` 按钮，找到所需模块后添加保存
 
 ![alt text](image/demo-3.gif)
+
+**导入旧项目**
+
+项目文件一般是扩展名为.dpk的压缩文件，解压后，启动 VSCode 并以解压后文件的`/app/code` 目录打开一个新窗口
+
+![alt text](image/demo-11.gif)
 
 # 连接设备，全量同步代码
 
