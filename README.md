@@ -58,7 +58,7 @@ The development process for dejaOS app is as follows:
 🤖 Project structure
 -------
 
-The main part of the project consists of five documents, as follows:
+The main body of the project consists of five parts, as follows:
 
 | File | Required | Function |
 |-------|-------|------|
