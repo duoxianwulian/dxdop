@@ -69,21 +69,21 @@ function initScreen() {
 
 function handleGpio () {
   const gpio_id_dw200 = 44
-  //初始化 gpio
+  // 初始化 gpio
   let res = gpio.init()
   logger.info('初始化 gpio', res)
-  //申请gpio
+  // 申请gpio
   res = gpio.request(gpio_id_dw200)
   logger.info('申请gpio', res)
-  //输出高电平 代表打开继电器
+  // 输出高电平 代表打开继电器
   res = gpio.setValue(gpio_id_dw200, 1)
   logger.info('输出高电平',res)
-  //获取当前是高电平还是低电平
+  // 获取当前是高电平还是低电平
   res = gpio.getValue(gpio_id_dw200)
   logger.info('现在电平为', res)
-  //等待3秒
+  // 等待3秒
   os.sleep(3000)
-  //输出低电平 代表关闭继电器
+  // 输出低电平 代表关闭继电器
   res = gpio.setValue(gpio_id_dw200, 0)
   logger.info('输出低电平', res);
   res = gpio.getValue(gpio_id_dw200)

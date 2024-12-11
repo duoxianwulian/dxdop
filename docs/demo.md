@@ -37,29 +37,29 @@ import std from '../dxmodules/dxStd.js'
 import gpio from '../dxmodules/dxGpio.js'
 import * as os from "os"
 
-// ui上下文
+// ui context
 let context = {}
 
 function initScreen() {
-  // ui初始化
+  // ui init
   dxui.init({ orientation: 1 }, context)
-  // 创建屏幕
+  // Create screen
   let mainView = dxui.View.build('mainView', dxui.Utils.LAYER.MAIN)
-  // 创建按钮控件
+  // Create a button control
   let button = dxui.Button.build(mainView.id + 'button', mainView)
-  // 设置按钮大小
+  // Set button size
   button.setSize(130, 50)
-  // 创建文本控件
+  // Create a label control
   let label = dxui.Label.build(mainView.id + 'label', button)
-  // 设置文本内容
+  // Set text content
   label.text("Click")
-  // 设置文本颜色
+  // Set text color
   label.textColor(0x000000)
-  // 设置文本在按钮中的位置
+  // Set the position of the text in the button
   label.align(dxui.Utils.ALIGN.CENTER, 0, 0)
-  // 监听按钮的点击事件
+  // Listen for button click event
   button.on(dxui.Utils.EVENT.CLICK, handleGpio)
-  // 加载屏幕
+  // Load screen
   dxui.loadMain(mainView)
 }
 
@@ -69,25 +69,25 @@ function initScreen() {
 
 function handleGpio () {
   const gpio_id_dw200 = 44
-  //初始化 gpio
+  // Init gpio
   let res = gpio.init()
-  logger.info('初始化 gpio', res)
-  //申请gpio
+  logger.info('init gpio', res)
+  // Request gpio
   res = gpio.request(gpio_id_dw200)
-  logger.info('申请gpio', res)
-  //输出高电平 代表打开继电器
+  logger.info('request gpio', res)
+  // Output high level to open the relay
   res = gpio.setValue(gpio_id_dw200, 1)
-  logger.info('输出高电平',res)
-  //获取当前是高电平还是低电平
+  logger.info('Output high level',res)
+  // Get whether the current level is high or low
   res = gpio.getValue(gpio_id_dw200)
-  logger.info('现在电平为', res)
-  //等待3秒
+  logger.info('The level is now', res)
+  // Wait 3 seconds
   os.sleep(3000)
-  //输出低电平 代表关闭继电器
+  // Output low level to close the relay
   res = gpio.setValue(gpio_id_dw200, 0)
-  logger.info('输出低电平', res);
+  logger.info('Output low level', res);
   res = gpio.getValue(gpio_id_dw200)
-  logger.info('现在电平为', res);
+  logger.info('The level is now', res);
 }
 
 std.setInterval(() => {
